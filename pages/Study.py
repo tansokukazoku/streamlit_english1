@@ -1,7 +1,5 @@
 import streamlit as st
-from googletrans import Translator
 from playsound import playsound
-import glob
 from gtts import gTTS
 import os
 
@@ -178,14 +176,14 @@ def main():
                       
     for text in texts:
         #音声ファイルを保存するファルダが無い時はフォルダを作成する 
-        dir = './english_study_ver2/音声データ2/'+Lesson
+        dir = './音声データ2/'+Lesson
         if not os.path.isdir(dir):
             os.mkdir(dir)
         else:
             pass
         
         #音声ファイルを作成する。音声ファイルがある時は音声ファイルを作成しない 
-        fil = './english_study_ver2/音声データ2/'+Lesson+'/'+text+'.mp3'
+        fil = './音声データ2/'+Lesson+'/'+text+'.mp3'
         
         if os.path.isfile(fil):
             pass
@@ -194,14 +192,14 @@ def main():
             speech.save(fil)
         
          #音声ファイル(slow)を保存するファルダが無い時はフォルダを作成する 
-        dir2 = './english_study_ver2/音声データ_slow/'+Lesson
+        dir2 = './音声データ_slow/'+Lesson
         if not os.path.isdir(dir2):
             os.mkdir(dir2)
         else:
             pass
         
         #音声ファイル(slow)を作成する。音声ファイルがある時は音声ファイルを作成しない 
-        fil2 = './english_study_ver2/音声データ_slow/'+Lesson+'/'+text+'.mp3'
+        fil2 = './音声データ_slow/'+Lesson+'/'+text+'.mp3'
         
         if os.path.isfile(fil2):
             pass
@@ -228,12 +226,12 @@ def main():
     if onsei:
         for text in texts:
             if selected == text: 
-                fil = './english_study_ver2/音声データ2/'+Lesson+'/'+text+'.mp3'
+                fil = './音声データ2/'+Lesson+'/'+text+'.mp3'
                 playsound(fil) 
     if onsei2:
         for text in texts:
             if selected == text: 
-                fil2 = './english_study_ver2/音声データ_slow/'+Lesson+'/'+text+'.mp3'
+                fil2 = './音声データ_slow/'+Lesson+'/'+text+'.mp3'
                 playsound(fil2)               
                        
 if __name__=='__main__':

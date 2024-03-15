@@ -1,9 +1,5 @@
 import streamlit as st
-from googletrans import Translator
 from playsound import playsound
-import glob
-from gtts import gTTS
-import os
 from PIL import Image
 
 
@@ -244,13 +240,13 @@ with col2:
                 t3 = texts.get(text)
                 st.write('正解は:',t3) 
                 if kaito_hyouji == t3:
-                    img1 = Image.open('./english_study_ver2/data/正解.png')
+                    img1 = Image.open('./data/正解.png')
                     st.image(img1,width=300)
-                    playsound('./english_study_ver2/data/Buzzer_seikai.mp3')
+                    playsound('./data/Buzzer_seikai.mp3')
                 else:
-                    img2 = Image.open('./english_study_ver2/data/不正解.png')
+                    img2 = Image.open('./data/不正解.png')
                     st.image(img2,width=300)
-                    playsound('./english_study_ver2/data/Buzzer_fuseikai.mp3')
+                    playsound('./data/Buzzer_fuseikai.mp3')
                         
                 
                 
