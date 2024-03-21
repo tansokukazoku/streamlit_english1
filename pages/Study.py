@@ -175,11 +175,11 @@ elif Lesson == 'Lesson2403':
                   
 for text in texts:
     #音声ファイルを保存するファルダが無い時はフォルダを作成する 
-    dir = './音声データ2/'+Lesson
-    if not os.path.isdir(dir):
-        os.mkdir(dir)
-    else:
-        pass
+    #dir = './音声データ2/'+Lesson
+    #if not os.path.isdir(dir):
+    #    os.mkdir(dir)
+    #else:
+    #    pass
     
     #音声ファイルを作成する。音声ファイルがある時は音声ファイルを作成しない 
     fil = './音声データ2/'+Lesson+'/'+text+'.mp3'
@@ -191,11 +191,11 @@ for text in texts:
         speech.save(fil)
     
      #音声ファイル(slow)を保存するファルダが無い時はフォルダを作成する 
-    dir2 = './音声データ_slow/'+Lesson
-    if not os.path.isdir(dir2):
-        os.mkdir(dir2)
-    else:
-        pass
+    #dir2 = './音声データ_slow/'+Lesson
+    #if not os.path.isdir(dir2):
+    #    os.mkdir(dir2)
+    #else:
+    #    pass
     
     #音声ファイル(slow)を作成する。音声ファイルがある時は音声ファイルを作成しない 
     fil2 = './音声データ_slow/'+Lesson+'/'+text+'.mp3'
