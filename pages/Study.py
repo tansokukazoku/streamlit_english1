@@ -172,39 +172,6 @@ elif Lesson == 'Lesson2403':
             'drink':'飲む','talk':'話す','present':'プレゼント','sandwich':'サンドイッチ',
             'juice':'ジュース','people':'人々','postcard':'ハガキ' 
             } 
-                  
-for text in texts:
-    #音声ファイルを保存するファルダが無い時はフォルダを作成する 
-    #dir = './音声データ2/'+Lesson
-    #if not os.path.isdir(dir):
-    #    os.mkdir(dir)
-    #else:
-    #    pass
-    
-    #音声ファイルを作成する。音声ファイルがある時は音声ファイルを作成しない 
-    fil = './音声データ2/'+Lesson+'/'+text+'.mp3'
-    
-    if os.path.isfile(fil):
-        pass
-    else:
-        speech = gTTS(text=text, lang='en', slow=False)
-        speech.save(fil)
-    
-     #音声ファイル(slow)を保存するファルダが無い時はフォルダを作成する 
-    #dir2 = './音声データ_slow/'+Lesson
-    #if not os.path.isdir(dir2):
-    #    os.mkdir(dir2)
-    #else:
-    #    pass
-    
-    #音声ファイル(slow)を作成する。音声ファイルがある時は音声ファイルを作成しない 
-    fil2 = './音声データ_slow/'+Lesson+'/'+text+'.mp3'
-    
-    if os.path.isfile(fil2):
-        pass
-    else:
-        speech = gTTS(text=text, lang='en', slow=True)
-        speech.save(fil2)         
 
 selected = st.radio('えいご',texts,index=1,horizontal=True)
 
